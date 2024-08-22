@@ -1,5 +1,6 @@
 import { defineConfig } from "vitest/config";
 import { checker } from "vite-plugin-checker";
+import dts from "vite-plugin-dts";
 
 export default defineConfig({
   test: {
@@ -16,5 +17,5 @@ export default defineConfig({
       fileName: "index",
     },
   },
-  plugins: [checker({ typescript: true })],
+  plugins: [dts({}), checker({ typescript: true })],
 });
